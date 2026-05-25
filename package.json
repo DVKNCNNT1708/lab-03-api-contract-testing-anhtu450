@@ -15,7 +15,7 @@
     "test:ci": "npm run lint:contracts && npm run test:mock"
   },
   "devDependencies": {
-    "@stoplight/prism-cli": "^5.14.2",
+    "@stoplight/prism-cli": "5.14.2",
     "@stoplight/spectral-cli": "^6.15.0",
     "newman": "^6.2.1",
     "newman-reporter-htmlextra": "^1.23.1",
