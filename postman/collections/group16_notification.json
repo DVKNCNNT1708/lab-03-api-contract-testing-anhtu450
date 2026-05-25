@@ -1,0 +1,1580 @@
+{
+  "info": {
+    "_postman_id": "0bc36af1-591e-467b-986d-5df187d72df0",
+    "name": "Smart Campus Notification API - Nhóm 16",
+    "description": "API cung cấp dịch vụ thông báo đa kênh cho hệ thống Campus thông minh.\n\nContact Support:\n Name: Trần Anh Tú\n Email: tu.trananh@student.dainam.edu.vn",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55021372",
+    "_collection_link": "https://go.postman.co/collection/55021372-0bc36af1-591e-467b-986d-5df187d72df0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "notifications",
+      "item": [
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "read",
+              "item": [
+                {
+                  "name": "Cập nhật trạng thái thông báo đã đọc",
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/problem+json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/notifications/:id/read",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "notifications",
+                        ":id",
+                        "read"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "09fd0ca6-fb19-4fd4-49b8-24f75a0a2886"
+                        }
+                      ]
+                    },
+                    "description": "Đánh dấu một thông báo là đã đọc bởi người dùng."
+                  },
+                  "response": [
+                    {
+                      "name": "Cập nhật thành công.",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [],
+                        "url": {
+                          "raw": "{{baseUrl}}/notifications/:id/read",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "notifications",
+                            ":id",
+                            "read"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "09fd0ca6-fb19-4fd4-49b8-24f75a0a2886"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    },
+                    {
+                      "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/problem+json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/notifications/:id/read",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "notifications",
+                            ":id",
+                            "read"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "09fd0ca6-fb19-4fd4-49b8-24f75a0a2886"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/problem+json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Tra cứu thông báo cụ thể theo ID",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/notifications/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "09fd0ca6-fb19-4fd4-49b8-24f75a0a2886"
+                    }
+                  ]
+                },
+                "description": "Lấy thông tin chi tiết của một thông báo dựa trên ID định danh."
+              },
+              "response": [
+                {
+                  "name": "Thông tin chi tiết thông báo.",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/notifications/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "notifications",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "09fd0ca6-fb19-4fd4-49b8-24f75a0a2886"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": \"00e03802-ec93-fece-0431-fbfa0a140320\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"hazardLevel\": 4\n}"
+                },
+                {
+                  "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/problem+json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/notifications/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "notifications",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "09fd0ca6-fb19-4fd4-49b8-24f75a0a2886"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/problem+json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "user",
+          "item": [
+            {
+              "name": "{userId}",
+              "item": [
+                {
+                  "name": "Lấy danh sách thông báo của người dùng",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/notifications/user/:userId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "notifications",
+                        "user",
+                        ":userId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "userId",
+                          "value": "string"
+                        }
+                      ]
+                    },
+                    "description": "Lấy toàn bộ danh sách thông báo thuộc về một sinh viên cụ thể."
+                  },
+                  "response": [
+                    {
+                      "name": "Danh sách thông báo.",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/notifications/user/:userId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "notifications",
+                            "user",
+                            ":userId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "userId",
+                              "value": "string"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"id\": \"e9c8ff06-bb54-d01d-fd63-310535a729b9\",\n    \"type\": \"string\",\n    \"courseName\": \"string\",\n    \"message\": \"string\"\n  },\n  {\n    \"id\": \"fb6fbd3f-a6b0-b372-0978-84a95c0b18c2\",\n    \"type\": \"string\",\n    \"courseName\": \"string\",\n    \"message\": \"string\"\n  }\n]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "01_Functional",
+      "item": [
+        {
+          "name": "Gửi một thông báo mới",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// 1. Kiểm tra Status Code (Mong đợi 201 Created)\r",
+                  "pm.test(\"Status code phải là 201 Created\", function () {\r",
+                  "    pm.response.to.have.status(201);\r",
+                  "});\r",
+                  "\r",
+                  "// 2. Kiểm tra Response Body có trả về ID không\r",
+                  "pm.test(\"Response phải chứa id của thông báo\", function () {\r",
+                  "    var jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData).to.have.property(\"id\"); \r",
+                  "});\r",
+                  "\r",
+                  "// 3. Kiểm tra tốc độ phản hồi (Hiệu năng cơ bản)\r",
+                  "pm.test(\"Thời gian phản hồi phải dưới 1000ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/notifications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "notifications"
+              ]
+            },
+            "description": "Tạo và gửi một thông báo mới (Học tập hoặc Khẩn cấp) tới hệ thống."
+          },
+          "response": [
+            {
+              "name": "Thông báo đã được tiếp nhận thành công.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": \"00e03802-ec93-fece-0431-fbfa0a140320\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"hazardLevel\": 4\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "02_Auth",
+      "item": [
+        {
+          "name": "POST Gửi thông báo - Không Token",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code phải là 401 Unauthorized (Chặn truy cập)\", function () {\r",
+                  "    pm.response.to.have.status(401);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Prefer",
+                "value": "code=401",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"Đây là nội dung test\",\n  \"type\": \"Academic\", \n  \"priority\": \"High\",\n  \"channel\": \"EMAIL\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/notifications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "notifications"
+              ]
+            },
+            "description": "Tạo và gửi một thông báo mới (Học tập hoặc Khẩn cấp) tới hệ thống."
+          },
+          "response": [
+            {
+              "name": "Thông báo đã được tiếp nhận thành công.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": \"00e03802-ec93-fece-0431-fbfa0a140320\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"hazardLevel\": 4\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "03_Negative",
+      "item": [
+        {
+          "name": "POST Gửi thông báo - Kênh không hợp lệ",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// 1. Kiểm tra API phải từ chối (Mã 400 Bad Request hoặc 422 Unprocessable Entity)\r",
+                  "pm.test(\"Status code phải là lỗi (400 hoặc 422)\", function () {\r",
+                  "    pm.expect(pm.response.code).to.be.oneOf([400, 422]);\r",
+                  "});\r",
+                  "\r",
+                  "// 2. Kiểm tra cấu trúc lỗi phải tuân thủ chuẩn Problem Details (RFC 7807)\r",
+                  "pm.test(\"Response lỗi phải theo chuẩn Problem Details\", function () {\r",
+                  "    var jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData).to.have.property(\"status\");\r",
+                  "    pm.expect(jsonData.status).to.be.within(400, 499);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Prefer",
+                "value": "code=422",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\",\n  \"channel\": \"TELEPATHY\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/notifications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "notifications"
+              ]
+            },
+            "description": "Tạo và gửi một thông báo mới (Học tập hoặc Khẩn cấp) tới hệ thống."
+          },
+          "response": [
+            {
+              "name": "Thông báo đã được tiếp nhận thành công.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": \"00e03802-ec93-fece-0431-fbfa0a140320\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"hazardLevel\": 4\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "04_Boundary_Reliability",
+      "item": [
+        {
+          "name": "POST Gửi thông báo - Spam API",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Độ tin cậy: Phải chặn khi gọi API quá nhiều (Mã 429 Rate Limit)\", function () {\r",
+                  "    pm.response.to.have.status(429);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Prefer",
+                "value": "code=401",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"Đây là nội dung test\",\n  \"type\": \"Academic\", \n  \"priority\": \"High\",\n  \"channel\": \"EMAIL\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/notifications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "notifications"
+              ]
+            },
+            "description": "Tạo và gửi một thông báo mới (Học tập hoặc Khẩn cấp) tới hệ thống."
+          },
+          "response": [
+            {
+              "name": "Thông báo đã được tiếp nhận thành công.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": \"00e03802-ec93-fece-0431-fbfa0a140320\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"hazardLevel\": 4\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "05_Consumer_side_Smoke",
+      "item": [
+        {
+          "name": "GET Tra cứu thông báo cụ thể theo ID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Smoke Test: Status code phải là 200 OK\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Prefer",
+                "value": "code=401",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"Đây là nội dung test\",\n  \"type\": \"Academic\", \n  \"priority\": \"High\",\n  \"channel\": \"EMAIL\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/notifications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "notifications"
+              ]
+            },
+            "description": "Tạo và gửi một thông báo mới (Học tập hoặc Khẩn cấp) tới hệ thống."
+          },
+          "response": [
+            {
+              "name": "Thông báo đã được tiếp nhận thành công.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": \"00e03802-ec93-fece-0431-fbfa0a140320\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"hazardLevel\": 4\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "06_Local_only_NonFunctional",
+      "item": [
+        {
+          "name": "POST Gửi thông báo - Kiểm tra hiệu năng",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Hiệu năng: Thời gian phản hồi phải dưới 500ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Prefer",
+                "value": "code=401",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"Đây là nội dung test\",\n  \"type\": \"Academic\", \n  \"priority\": \"High\",\n  \"channel\": \"EMAIL\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/notifications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "notifications"
+              ]
+            },
+            "description": "Tạo và gửi một thông báo mới (Học tập hoặc Khẩn cấp) tới hệ thống."
+          },
+          "response": [
+            {
+              "name": "Thông báo đã được tiếp nhận thành công.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": \"00e03802-ec93-fece-0431-fbfa0a140320\",\n  \"type\": \"string\",\n  \"location\": \"string\",\n  \"hazardLevel\": 4\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            },
+            {
+              "name": "Lỗi theo chuẩn Problem Details (RFC 7807)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/problem+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recipientId\": \"SV123456\",\n  \"content\": \"string\",\n  \"type\": \"Academic\",\n  \"priority\": \"High\",\n  \"title\": \"Thông báo báo cháy\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/notifications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "notifications"
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/problem+json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"type\": \"http://CQGR.oqyzYjlYhXmZe9DOmgRDBwfqSxWIx11WXKw31yPClJ+xbdig,L\",\n  \"title\": \"string\",\n  \"status\": 1852,\n  \"detail\": \"string\",\n  \"instance\": \"https://bpmdhjQaxsABxasFsWEhWhM.qgELXOymvYDIcufzYdChTUf\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:4010"
+    }
+  ]
+}

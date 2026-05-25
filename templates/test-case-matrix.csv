@@ -1,6 +1,19 @@
 ID,Folder,Endpoint,Method,Scenario,Input file/body,Expected status,Expected response check,Type,Pass/Fail,Evidence
-TC01,Functional,/health,GET,Service is alive,-,200,status=ok,functional,,
-TC02,Functional,/readings,POST,Create reading happy path,mock-data/sensor-reading-valid.json,201,"has reading_id, accepted=true",functional,,
-TC03,Negative,/readings,POST,Missing device_id,mock-data/sensor-reading-invalid-missing-device.json,400,Problem Details,negative,,
-TC04,Auth,/readings,POST,Missing token,mock-data/sensor-reading-valid.json,401,Problem Details,auth,,
-TC05,Boundary,/readings,POST,High temperature boundary,mock-data/sensor-reading-boundary.json,201/400,documented behavior,boundary,,
+TC01,Functional,/notifications,POST,Create notification (Academic),-,201,has id + type + channel,functional,pass,newman-report
+TC02,Functional,/notifications,POST,Create notification (Emergency),-,201,type=Emergency,functional,pass,newman-report
+TC03,Functional,/notifications/{id},GET,Retrieve notification by ID,-,200,has id + type + channel,functional,pass,newman-report
+TC04,Functional,/notifications/user/{userId},GET,List user notifications,-,200,array response,functional,pass,newman-report
+TC05,Functional,/notifications/{id}/read,PATCH,Mark notification as read,-,200,success,functional,pass,newman-report
+TC06,Functional,/notifications/{id}/retry,POST,Retry failed notification,-,200,success,functional,pass,newman-report
+TC07,Auth,/notifications,POST,Missing token,-,401,Problem Details (401),auth,pass,newman-report
+TC08,Auth,/notifications,POST,Invalid token,Authorization: Bearer invalid,401,Problem Details,auth,pass,newman-report
+TC09,Auth,/notifications/{id},GET,Missing token,-,401,Problem Details,auth,pass,newman-report
+TC10,Negative,/notifications,POST,Missing recipientId,-,400/422,Problem Details,negative,pass,newman-report
+TC11,Negative,/notifications,POST,Invalid channel enum,channel=INVALID,400/422,Problem Details,negative,pass,newman-report
+TC12,Negative,/notifications,POST,Invalid type enum,type=InvalidType,400/422,Problem Details,negative,pass,newman-report
+TC13,Negative,/notifications,POST,Content exceeds maxLength,-,400/422,mentions content length,negative,pass,newman-report
+TC14,Negative,/notifications/{id},GET,Not found (404),id=non-existent-uuid,404,Problem Details,negative,pass,newman-report
+TC15,Boundary,/notifications,POST,With Idempotency key (Dedupe),X-Idempotency-Key header,201,deduplication support,boundary,pass,newman-report
+TC16,Boundary,/notifications,POST,Priority Low,-,201,accepts priority=Low,boundary,pass,newman-report
+TC17,Boundary,/notifications,POST,Channel SMS,-,201,channel=SMS,boundary,pass,newman-report
+
